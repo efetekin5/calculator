@@ -18,7 +18,7 @@ function divide(a, b) {
     return a / b;
 }
 
-function operater(number1, operator, number2) {
+function operate(number1, operator, number2) {
     if (operator == '*') {
         return multiply(number1, number2);
     } else if (operator == '+') {
@@ -34,4 +34,4 @@ console.log(add(5,3));
 console.log(substract(5,3));
 console.log(multiply(5,3));
 console.log(divide(6,3));
-console.log(operater(20, '*', 5));
+console.log(operate(20, '*', 5));
