@@ -30,8 +30,27 @@ function operate(number1, operator, number2) {
     }
 }
 
-console.log(add(5,3));
-console.log(substract(5,3));
-console.log(multiply(5,3));
-console.log(divide(6,3));
-console.log(operate(20, '*', 5));
+function display(element) {
+    let displayDiv = document.querySelector('.display');
+    displayDiv.innerHTML += `${element.innerHTML}`;
+}
+
+function reset() {
+    let displayDiv = document.querySelector('.display');
+    displayDiv.innerHTML = '';
+}
+
+function delet() {
+    let displayDiv = document.querySelector('.display');
+    let newDiv = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1);
+    displayDiv.innerHTML = newDiv;
+}
+
+let addition = document.querySelector('.add');
+addition.addEventListener('click', () => {
+    let displayDiv = document.querySelector('.display');
+    let operator = displayDiv.innerHTML.slice()
+    let additionNumber = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1);
+    console.log(additionNumber);
+    reset();
+})
