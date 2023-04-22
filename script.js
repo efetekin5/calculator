@@ -1,21 +1,21 @@
-let firstNumber = 0;
+let firstNumber = '';
 let operator = '';
-let secondNumber = 0;
+let secondNumber = '';
 
 function add(a, b) {
-    return a + b;
+    return Math.round((a + b)*100) / 100;
 }
 
 function substract(a, b) {
-    return a - b;
+    return Math.round((a - b)*100) / 100;
 }
 
 function multiply(a, b) {
-    return a * b;
+    return Math.round((a * b)*100) / 100;
 }
 
 function divide(a, b) {
-    return a / b;
+    return Math.round((a / b)*100) / 100;
 }
 
 function operate(number1, operator, number2) {
@@ -50,47 +50,25 @@ function delet() {
 
 
 
-let addition = document.querySelector('.add');
-addition.addEventListener('click', () => {
-    let displayDiv = document.querySelector('.display');
-    operator = displayDiv.innerHTML.slice(displayDiv.innerHTML.length-1, displayDiv.innerHTML.length)
-    firstNumber = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1).replace(/\s/g, '');
-    firstNumber = parseInt(firstNumber, 10);
-    reset();
-})
-
-let substraction = document.querySelector('.substract');
-substraction.addEventListener('click', () => {
-    let displayDiv = document.querySelector('.display');
-    operator = displayDiv.innerHTML.slice(displayDiv.innerHTML.length-1, displayDiv.innerHTML.length)
-    firstNumber = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1).replace(/\s/g, '');
-    firstNumber = parseInt(firstNumber, 10);
-    reset();
-})
-
-let multiplication = document.querySelector('.multiply');
-multiplication.addEventListener('click', () => {
-    let displayDiv = document.querySelector('.display');
-    operator = displayDiv.innerHTML.slice(displayDiv.innerHTML.length-1, displayDiv.innerHTML.length)
-    firstNumber = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1).replace(/\s/g, '');
-    firstNumber = parseInt(firstNumber, 10);
-    reset();
-})
-
-let division = document.querySelector('.divide');
-division.addEventListener('click', () => {
-    let displayDiv = document.querySelector('.display');
-    operator = displayDiv.innerHTML.slice(displayDiv.innerHTML.length-1, displayDiv.innerHTML.length)
-    firstNumber = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1).replace(/\s/g, '');
-    firstNumber = parseInt(firstNumber, 10);
-    reset();
+let operation = document.querySelectorAll('.operation');
+operation.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        let displayDiv = document.querySelector('.display');
+        operator = displayDiv.innerHTML.slice(displayDiv.innerHTML.length-1, displayDiv.innerHTML.length)
+        firstNumber = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1).replace(/\s/g, '');
+        firstNumber = parseFloat(firstNumber, 10);
+        reset();
+    })
 })
 
 let equals = document.querySelector('.calculate');
 equals.addEventListener('click', () => {
     let displayDiv = document.querySelector('.display');
     secondNumber = displayDiv.innerHTML.slice(0, displayDiv.innerHTML.length-1);
-    secondNumber = parseInt(secondNumber, 10);
+    secondNumber = parseFloat(secondNumber, 10);
     let result = operate(firstNumber, operator, secondNumber);
     displayDiv.innerHTML = result;
+    secondNumber = '';
+    firstNumber = '';
+    operator = '';
 })

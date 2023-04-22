@@ -31,6 +31,7 @@ body {
     align-items: center;
     font-size: 50px;
     padding-right: 10px;
+    background-color: white;
 }
 
 button {
@@ -54,5 +55,13 @@ button {
 .allButtons {
     width: 500px;
     border: 1px black solid;
+    background-color: lightgrey;
+}
+
+.calculator {
+    border: 1px black solid;
+    border-radius: 6px;
+    background-color: lightgray;
+    padding: 20px;
 }
 

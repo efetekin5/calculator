@@ -6,30 +6,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="display">  
-    </div>
-    <div class="allButtons">
-        <div class="extraButtons">
-            <button onclick="reset()">Clear</button>
-            <button onclick="delet()">Delete</button>
+    <div class="calculator">
+        <div class="display">  
         </div>
-        <div class="container">
-            <button onclick="display(this)">7</button>
-            <button onclick="display(this)">8</button>
-            <button onclick="display(this)">9</button>
-            <button class="multiply" onclick="display(this)">*</button>
-            <button onclick="display(this)">4</button>
-            <button onclick="display(this)">5</button>
-            <button onclick="display(this)">6</button>
-            <button class="substract" onclick="display(this)">-</button>
-            <button onclick="display(this)">1</button>
-            <button onclick="display(this)">2</button>
-            <button onclick="display(this)">3</button>
-            <button class="add" onclick="display(this)">+</button>
-            <button onclick="display(this)">.</button>
-            <button onclick="display(this)">0</button>
-            <button class="calculate" onclick="display(this)">=</button>
-            <button class="divide" onclick="display(this)">/</button>
+        <div class="allButtons">
+            <div class="extraButtons">
+                <button onclick="reset()">Clear</button>
+                <button onclick="delet()">Delete</button>
+            </div>
+            <div class="container">
+                <button onclick="display(this)">7</button>
+                <button onclick="display(this)">8</button>
+                <button onclick="display(this)">9</button>
+                <button class="operation" onclick="display(this)">*</button>
+                <button onclick="display(this)">4</button>
+                <button onclick="display(this)">5</button>
+                <button onclick="display(this)">6</button>
+                <button class="operation" onclick="display(this)">-</button>
+                <button onclick="display(this)">1</button>
+                <button onclick="display(this)">2</button>
+                <button onclick="display(this)">3</button>
+                <button class="operation" onclick="display(this)">+</button>
+                <button onclick="display(this)">.</button>
+                <button onclick="display(this)">0</button>
+                <button class="calculate" onclick="display(this)">=</button>
+                <button class="operation" onclick="display(this)">/</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
